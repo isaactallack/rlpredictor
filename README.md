@@ -11,3 +11,8 @@ Uses 110 statistics from ballchasing.com, such as:
 - bpm for/against
 - boost for/against
 - demos for/against
+
+'main.py' - takes a URL from ballchasing.com and downloads all replays on the page currently displayed. Make sure to delete all files from the 'csvs' folder before using this otherwise they will not be saved!
+'create_df' - merges and filters all replay statistic files creating 'combined_data.csv', 'filtered_data.csv', 'raw_train.csv' and 'train.csv'. Only 'train.csv' is of interest. This contains all feature points + the result (for training/validation) and the goal difference (this is not used and discarded but was included for some testing of loss functions).
+'model.py' - this is the Tensorflow training model and create the model for predictions.
+'predict.py' - use this to predict the results from 'train.csv'.
